@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VPAppManager_Example' do
+  pod 'VPAppManager', :path => '../'
+
+  target 'VPAppManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
