@@ -8,11 +8,17 @@
 
 import UIKit
 
+public protocol VPAppManagerDelegate {
+    func shouldDisplayNagScreen(_ nagScreen: VPNagScreen) -> Bool
+}
+
 open class VPAppManager: NSObject {
     public static let shared = VPAppManager()
 
     var applications: [VPApplication] = [VPApplication]()
     var currentApp: VPApplication?
+
+    var delegate: VPAppManagerDelegate?
 
     override init() {
         super.init()
@@ -38,6 +44,8 @@ open class VPAppManager: NSObject {
             return
         }
 
-        currentApp.showNagScreen()
+        if delegate?.shouldDisplayNagScreen(currentApp.nagScreen) ?? true {
+            currentApp.showNagScreen()
+        }
     }
 }
