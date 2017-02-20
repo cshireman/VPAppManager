@@ -18,7 +18,7 @@ open class VPAppManager: NSObject {
     var applications: [VPApplication] = [VPApplication]()
     var currentApp: VPApplication?
 
-    var delegate: VPAppManagerDelegate?
+    open var delegate: VPAppManagerDelegate?
 
     override init() {
         super.init()
