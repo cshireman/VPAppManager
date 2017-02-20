@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import VPAppManager
 
 class ViewController: UIViewController {
 

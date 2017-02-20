@@ -1,0 +1,6 @@
+framework module VPAppManager {
+  umbrella header "VPAppManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
