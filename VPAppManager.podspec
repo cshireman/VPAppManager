@@ -32,13 +32,14 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'VPAppManager/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'VPAppManager' => ['VPAppManager/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'VPAppManager' => ['VPAppManager/Assets/*.png', 'VPAppManager/Storyboards/*.storyboard']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Alamofire', '~> 4.3'
   s.dependency 'SwiftyJSON'
+  s.dependency 'SDWebImage'
 
 end

@@ -44,4 +44,12 @@ open class VPApplication: NSObject {
 
         nagScreen.incrementCount()
     }
+
+    public func url() -> URL {
+        if affiliteLink != "" {
+            return URL(string: affiliteLink)!
+        }
+
+        return URL(string: "https://itunes.apple.com/us/app/apple-store/id\(appleId)?mt=8")!
+    }
 }

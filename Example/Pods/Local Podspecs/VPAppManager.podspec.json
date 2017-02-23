@@ -19,11 +19,20 @@
     "ios": "10.0"
   },
   "source_files": "VPAppManager/Classes/**/*",
+  "resource_bundles": {
+    "VPAppManager": [
+      "VPAppManager/Assets/*.png",
+      "VPAppManager/Storyboards/*.storyboard"
+    ]
+  },
   "dependencies": {
     "Alamofire": [
       "~> 4.3"
     ],
     "SwiftyJSON": [
+
+    ],
+    "SDWebImage": [
 
     ]
   }

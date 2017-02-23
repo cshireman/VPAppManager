@@ -48,4 +48,12 @@ open class VPAppManager: NSObject {
             currentApp.showNagScreen()
         }
     }
+
+    open func presentMoreAppsController() {
+        let storyboard = UIStoryboard(name: "VPAppManager", bundle: Bundle.init(for: VPAppManager.self))
+        let navController = storyboard.instantiateViewController(withIdentifier: "MoreAppsNavController")
+        let rootController = UIApplication.shared.delegate?.window??.rootViewController
+
+        rootController?.present(navController, animated: true, completion: nil)
+    }
 }
